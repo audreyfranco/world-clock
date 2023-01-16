@@ -21,6 +21,17 @@ let parisTime = moment().tz("Europe/Paris");
 parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
 parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 }
+
+//Mexico City
+let mexicoCityElement = document.querySelector("#mexico-city");
+if (mexicoCityElement) {
+let mexicoCityDateElement = mexicoCityElement.querySelector(".date");
+let mexicoCityTimeElement = mexicoCityElement.querySelector(".time");
+let mexicoCityTime = moment().tz("America/Mexico_City");
+
+mexicoCityDateElement.innerHTML = mexicoCityTime.format("MMMM Do YYYY");
+mexicoCityTimeElement.innerHTML = mexicoCityTime.format("h:mm:ss [<small>]A[</small>]");
+}
 }
 
 function updateCity(event) {
